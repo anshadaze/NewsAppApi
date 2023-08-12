@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:newsapp/helper/data.dart';
 import 'package:newsapp/helper/news.dart';
@@ -79,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     } ),
                 ),
          
-                //Block
+                //Blogs
                 Container(
                   child: ListView.builder(
                     itemCount: articles.length,
@@ -89,7 +91,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       return BlogTile(
                         imageUrl:articles[index].urlToImage, 
                         title:articles[index].title,
-                         desc:articles[index].description);
+                         desc:articles[index].description,
+                         Url: articles[index].url,
+                         );
+                         
                     }),
                 )
               ],
