@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/helper/news.dart';
+import 'package:newsapp/services/news.dart';
 import 'package:newsapp/views/homeScreen/home.dart';
-import 'package:newsapp/views/homeScreen/widgets.dart';
+import 'package:newsapp/views/homeScreen/widgets/widgets.dart';
 
-import '../models/articleModel/articleModel.dart';
+import '../../models/articleModel/articleModel.dart';
 
 class CateogryNews extends StatefulWidget {
   final category;
@@ -89,7 +89,7 @@ class _CateogryNewsState extends State<CateogryNews> {
                 ],
               ),
             ),
-        )     //Blogs
+        )
               
     );
   }

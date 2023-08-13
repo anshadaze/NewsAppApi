@@ -2,8 +2,8 @@
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:newsapp/views/articleView.dart';
-import 'package:newsapp/views/categoryNews.dart';
+import 'package:newsapp/views/articleView/articleView.dart';
+import 'package:newsapp/views/categoryNews/categoryNews.dart';
 
 class CategoryTile extends StatelessWidget {
   final imageUrl, categoryName;

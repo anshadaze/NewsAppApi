@@ -1,8 +1,5 @@
 import 'dart:convert';
-
-import 'package:flutter/material.dart';
 import 'package:newsapp/models/articleModel/articleModel.dart';
-import 'package:newsapp/views/articleView.dart';
 import 'package:http/http.dart'as http;
 
 class News{
@@ -26,7 +23,6 @@ class News{
            description: element["description"],
            url: element["url"],
            urlToImage: element["urlToImage"],
-          //  publishAt: element["publishedAt"],
            content: element["content"]
         );
 
@@ -59,6 +55,8 @@ class CategoryNewsClass{
    if(jsonData['status']=="ok"){
     jsonData["articles"].forEach((element){
       if(element["urlToImage"]!=null && element["description"]!=null){
+
+        //changefromjson
 
         ArticleModel articleModel=ArticleModel(
            title: element['title'],
