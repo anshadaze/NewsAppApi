@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/controller/newsProvider.dart';
+import 'package:newsapp/controller/news_provider.dart';
 import 'package:newsapp/views/homeScreen/home.dart';
 import 'package:provider/provider.dart';
 

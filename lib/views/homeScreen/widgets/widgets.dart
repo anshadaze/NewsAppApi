@@ -1,9 +1,7 @@
-
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:newsapp/views/articleView/articleView.dart';
-import 'package:newsapp/views/categoryNews/categoryNews.dart';
+import 'package:newsapp/views/articleView/article_screen.dart';
+import 'package:newsapp/views/categoryNews/category_screen.dart';
 
 class CategoryTile extends StatelessWidget {
   final imageUrl, categoryName;
@@ -13,12 +11,14 @@ class CategoryTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) => CateogryNews(
-          category: categoryName.toLowerCase(),
-        ),));
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => CateogryNews(
+            category: categoryName.toLowerCase(),
+          ),
+        ));
       },
       child: Container(
-        margin: EdgeInsets.only(right: 16),
+        margin: const EdgeInsets.only(right: 16),
         child: Stack(
           children: <Widget>[
             ClipRRect(
@@ -39,7 +39,7 @@ class CategoryTile extends StatelessWidget {
               height: 60,
               child: Text(
                 categoryName,
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.white,
                     fontSize: 14,
                     fontWeight: FontWeight.w500),
@@ -74,28 +74,28 @@ class BlogTile extends StatelessWidget {
             ));
       },
       child: Container(
-        margin: EdgeInsets.only(bottom: 16),
+        margin: const EdgeInsets.only(bottom: 16),
         child: Column(
           children: [
             ClipRRect(
                 borderRadius: BorderRadius.circular(6),
-                child: Image.network(imageUrl)),
-            SizedBox(
+                child: Image.network(imageUrl ?? "Not Found")),
+            const SizedBox(
               height: 10,
             ),
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.w600,
                   color: Colors.black87),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Text(
-              desc,
-              style: TextStyle(color: Color.fromARGB(123, 51, 46, 46)),
+              desc ?? "Not Found",
+              style: const TextStyle(color: Color.fromARGB(123, 51, 46, 46)),
             )
           ],
         ),
