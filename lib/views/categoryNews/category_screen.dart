@@ -53,6 +53,9 @@ class _CateogryNewsState extends State<CateogryNews> {
           ),
        body:Consumer<NewsProvider>(
         builder: (context,provider, child) {
+           if(provider.isLoading){
+                return const Center(child: CircularProgressIndicator(),);
+              }
           return  SingleChildScrollView(
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 15),

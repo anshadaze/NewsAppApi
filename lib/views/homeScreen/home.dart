@@ -41,6 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: Consumer<NewsProvider>(
           builder: (context, provider, child) {
+             if(provider.isLoading){
+                return const Center(child: CircularProgressIndicator(),);
+              }
             return SingleChildScrollView(
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
